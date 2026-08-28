@@ -49,3 +49,21 @@ gcc -Wall -Wextra -std=c11 -g -fopenmp -o mandelbrot mandelbrot.o -lpthread -lm
 [?2004lexit
 
 Script done on 2026-08-28 11:30:28-03:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2026-08-28 11:43:18-03:00 [TERM="xterm-256color" TTY="/dev/pts/5" COLUMNS="156" LINES="9"]
+[?2004h]0;henrique@Lenovin: ~/mandelbrot/Implementa-o2-SO[01;32mhenrique@Lenovin[00m:[01;34m~/mandelbrot/Implementa-o2-SO[00m$ [7mprintf "5 10 10 10\n5 15 30 25\n255 255 255 255\n5 15 30 25\n" > esperado.txt[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cprintf "5 10 10 10\n5 15 30 25\n255 255 255 255\n5 15 30 25\n" > esperado.txt
+[?2004l[?2004h]0;henrique@Lenovin: ~/mandelbrot/Implementa-o2-SO[01;32mhenrique@Lenovin[00m:[01;34m~/mandelbrot/Implementa-o2-SO[00m$ make
+[?2004lgcc -Wall -Wextra -std=c11 -g -fopenmp -c mandelbrot.c -o mandelbrot.o
+gcc -Wall -Wextra -std=c11 -g -fopenmp -o mandelbrot mandelbrot.o -lpthread -lm
+[?2004h]0;henrique@Lenovin: ~/mandelbrot/Implementa-o2-SO[01;32mhenrique@Lenovin[00m:[01;34m~/mandelbrot/Implementa-o2-SO[00m$ ./mandelbrot
+[?2004l[?2004h]0;henrique@Lenovin: ~/mandelbrot/Implementa-o2-SO[01;32mhenrique@Lenovin[00m:[01;34m~/mandelbrot/Implementa-o2-SO[00m$ ./mandelbrot[8Pmakeprintf "5 10 10 10\n5 15 30 25\n255 255 255 255\n5 15 30 25\n" > esperado.txt[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cexit[Kdiff teste.pgm esperado.txtexit[Kcat teste.pgm[1P./mandelbrotcat teste.pgm
+[?2004l5 10 10 10
+5 15 30 25
+255 255 255 255
+5 15 30 25
+[?2004h]0;henrique@Lenovin: ~/mandelbrot/Implementa-o2-SO[01;32mhenrique@Lenovin[00m:[01;34m~/mandelbrot/Implementa-o2-SO[00m$ [7mdiff teste.pgm esperado.txt[27mdiff teste.pgm esperado.txt
+[?2004l[?2004h]0;henrique@Lenovin: ~/mandelbrot/Implementa-o2-SO[01;32mhenrique@Lenovin[00m:[01;34m~/mandelbrot/Implementa-o2-SO[00m$ [7mecho "resultado: $?"[27mecho "resultado: $?"
+[?2004lresultado: 0
+[?2004h]0;henrique@Lenovin: ~/mandelbrot/Implementa-o2-SO[01;32mhenrique@Lenovin[00m:[01;34m~/mandelbrot/Implementa-o2-SO[00m$ exit
+[?2004lexit
+
+Script done on 2026-08-28 11:44:04-03:00 [COMMAND_EXIT_CODE="0"]
