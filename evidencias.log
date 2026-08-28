@@ -1,0 +1,37 @@
+Script started on 2026-08-28 09:37:40-03:00 [TERM="xterm-256color" TTY="/dev/pts/3" COLUMNS="156" LINES="9"]
+[?2004h]0;henrique@Lenovin: ~/mandelbrot/Implementa-o2-SO[01;32mhenrique@Lenovin[00m:[01;34m~/mandelbrot/Implementa-o2-SO[00m$ [7mprintf("%d\n", calcula_pixel(-1.25, -0.75, 50));[27mprintf("%d\n", calcula_pixel(-1.25, -0.75, 50));
+[?2004lbash: syntax error near unexpected token `"%d\n",'
+[?2004h]0;henrique@Lenovin: ~/mandelbrot/Implementa-o2-SO[01;32mhenrique@Lenovin[00m:[01;34m~/mandelbrot/Implementa-o2-SO[00m$ exit
+[?2004lexit
+
+Script done on 2026-08-28 09:38:20-03:00 [COMMAND_EXIT_CODE="2"]
+Script started on 2026-08-28 09:39:42-03:00 [TERM="xterm-256color" TTY="/dev/pts/3" COLUMNS="156" LINES="9"]
+[?2004h]0;henrique@Lenovin: ~/mandelbrot/Implementa-o2-SO[01;32mhenrique@Lenovin[00m:[01;34m~/mandelbrot/Implementa-o2-SO[00m$ make ./mandelbrot
+[?2004lgcc -Wall -Wextra -std=c11 -g -fopenmp -c mandelbrot.c -o mandelbrot.o
+[01m[Kmandelbrot.c:[m[K In function ‘[01m[Kmain[m[K’:
+[01m[Kmandelbrot.c:18:5:[m[K [01;35m[Kwarning: [m[Kimplicit declaration of function ‘[01m[Kprintf[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wimplicit-function-declaration-Wimplicit-function-declaration]8;;[m[K]
+   18 |     [01;35m[Kprintf[m[K("%d\n", calcula_pixel(-1.25, -0.75, 50));
+      |     [01;35m[K^~~~~~[m[K
+[01m[Kmandelbrot.c:2:1:[m[K [01;36m[Knote: [m[Kinclude ‘[01m[K<stdio.h>[m[K’ or provide a declaration of ‘[01m[Kprintf[m[K’
+    1 | #include "mandelbrot.h"
+  +++ |+[32m[K#include <stdio.h>[m[K
+    2 | 
+[01m[Kmandelbrot.c:18:5:[m[K [01;35m[Kwarning: [m[Kincompatible implicit declaration of built-in function ‘[01m[Kprintf[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wbuiltin-declaration-mismatch-Wbuiltin-declaration-mismatch]8;;[m[K]
+   18 |     [01;35m[Kprintf[m[K("%d\n", calcula_pixel(-1.25, -0.75, 50));
+      |     [01;35m[K^~~~~~[m[K
+[01m[Kmandelbrot.c:18:5:[m[K [01;36m[Knote: [m[Kinclude ‘[01m[K<stdio.h>[m[K’ or provide a declaration of ‘[01m[Kprintf[m[K’
+gcc -Wall -Wextra -std=c11 -g -fopenmp -o mandelbrot mandelbrot.o -lpthread -lm
+[?2004h]0;henrique@Lenovin: ~/mandelbrot/Implementa-o2-SO[01;32mhenrique@Lenovin[00m:[01;34m~/mandelbrot/Implementa-o2-SO[00m$ exit
+[?2004lexit
+
+Script done on 2026-08-28 09:40:06-03:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2026-08-28 09:41:01-03:00 [TERM="xterm-256color" TTY="/dev/pts/3" COLUMNS="156" LINES="9"]
+[?2004h]0;henrique@Lenovin: ~/mandelbrot/Implementa-o2-SO[01;32mhenrique@Lenovin[00m:[01;34m~/mandelbrot/Implementa-o2-SO[00m$ exitmake ./mandelbrotexit[Kmake ./mandelbrot
+[?2004lgcc -Wall -Wextra -std=c11 -g -fopenmp -c mandelbrot.c -o mandelbrot.o
+gcc -Wall -Wextra -std=c11 -g -fopenmp -o mandelbrot mandelbrot.o -lpthread -lm
+[?2004h]0;henrique@Lenovin: ~/mandelbrot/Implementa-o2-SO[01;32mhenrique@Lenovin[00m:[01;34m~/mandelbrot/Implementa-o2-SO[00m$ make ./mandelbrotexit[K[K[K[K[K.[K./mandelbrot
+[?2004l3
+[?2004h]0;henrique@Lenovin: ~/mandelbrot/Implementa-o2-SO[01;32mhenrique@Lenovin[00m:[01;34m~/mandelbrot/Implementa-o2-SO[00m$ exit
+[?2004lexit
+
+Script done on 2026-08-28 09:42:11-03:00 [COMMAND_EXIT_CODE="0"]
