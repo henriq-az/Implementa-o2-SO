@@ -1,0 +1,13 @@
+# Mandelbrot
+
+## Arquivos
+
+
+## Como compilar
+make
+
+## Como executar
+./mandelbrot largura altura max_iteracoes num_threads
+
+## Sistema operacional testado
+Ubuntu 24.04 (WSL2, arm64)
