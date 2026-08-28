@@ -39,8 +39,37 @@ void escreve_pgm(const char *nome_arquivo, int *buffer, int largura, int altura,
     fclose(f);
 }
 
-int main(void) {
-    int buffer[16] = {1, 2, 2, 2, 1, 3, 6, 5, 50, 50, 50, 50, 1, 3, 6, 5};
-    escreve_pgm("teste.pgm", buffer, 4, 4, 50);
+void mandelbrot_serial(int *buffer, int largura, int altura, int max_iter) {
+    for (int y = 0; y < altura; y++) {
+        for (int x = 0; x < largura; x++) {
+            double cx = XMIN + x * (XMAX - XMIN) / largura;
+            double cy = YMIN + y * (YMAX - YMIN) / altura;
+            buffer[y * largura + x] = calcula_pixel(cx, cy, max_iter);
+        }
+    }
+}
+
+int main(int argc, char *argv[]) {
+    if (argc != 5) {
+        fprintf(stderr, "Uso: %s largura altura max_iteracoes num_threads\n", argv[0]);
+        return 1;
+    }
+
+    int largura = atoi(argv[1]);
+    int altura = atoi(argv[2]);
+    int max_iter = atoi(argv[3]);
+    int num_threads = atoi(argv[4]);
+    (void)num_threads;
+
+    int *buffer = malloc(largura * altura * sizeof(int));
+    if (buffer == NULL) {
+        fprintf(stderr, "Erro ao alocar buffer\n");
+        return 1;
+    }
+
+    mandelbrot_serial(buffer, largura, altura, max_iter);
+    escreve_pgm("mandelbrot_hac2_serial.pgm", buffer, largura, altura, max_iter);
+
+    free(buffer);
     return 0;
 }
