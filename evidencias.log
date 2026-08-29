@@ -104,3 +104,21 @@ Script started on 2026-08-28 19:54:50-03:00 [TERM="xterm-256color" TTY="/dev/pts
 [?2004lexit
 
 Script done on 2026-08-28 19:55:11-03:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2026-08-29 10:24:42-03:00 [TERM="xterm-256color" TTY="/dev/pts/5" COLUMNS="156" LINES="9"]
+[?2004h]0;henrique@Lenovin: ~/mandelbrot/Implementa-o2-SO[01;32mhenrique@Lenovin[00m:[01;34m~/mandelbrot/Implementa-o2-SO[00m$ make
+[?2004lmake: Nothing to be done for 'all'.
+[?2004h]0;henrique@Lenovin: ~/mandelbrot/Implementa-o2-SO[01;32mhenrique@Lenovin[00m:[01;34m~/mandelbrot/Implementa-o2-SO[00m$ [7m./mandelbrot 6 6 30 3[27m
+[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C./mandelbrot 6 6 30 3
+[A
+[?2004l[?2004h]0;henrique@Lenovin: ~/mandelbrot/Implementa-o2-SO[01;32mhenrique@Lenovin[00m:[01;34m~/mandelbrot/Implementa-o2-SO[00m$ [7mprintf "8 8 17 17 17 17\n8 17 25 34 255 17\n8 25 42 255 255 42\n255 255 255 255 255 42\n8 25 42 255 255 42\n[27m[7m8[27m[7m 17 25 34 255 17\n" > esperado_openmp.txt [27m
+[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cprintf "8 8 17 17 17 17\n8 17 25 34 255 17\n8 25 42 255 255 42\n255 255 255 255 255 42\n8 25 42 255 255 42\n8 17 25 34 255 17\n" > esperado_openmp.txt
+[A
+[?2004l[?2004h]0;henrique@Lenovin: ~/mandelbrot/Implementa-o2-SO[01;32mhenrique@Lenovin[00m:[01;34m~/mandelbrot/Implementa-o2-SO[00m$ [7mdiff mandelbrot_hac2_openmp.pgm esperado_openmp.txt[27m
+[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdiff mandelbrot_hac2_openmp.pgm esperado_openmp.txt
+[A
+[?2004l[?2004h]0;henrique@Lenovin: ~/mandelbrot/Implementa-o2-SO[01;32mhenrique@Lenovin[00m:[01;34m~/mandelbrot/Implementa-o2-SO[00m$ [7mecho "resultado: $?"[27mecho "resultado: $?"
+[?2004lresultado: 0
+[?2004h]0;henrique@Lenovin: ~/mandelbrot/Implementa-o2-SO[01;32mhenrique@Lenovin[00m:[01;34m~/mandelbrot/Implementa-o2-SO[00m$ exit
+[?2004lexit
+
+Script done on 2026-08-29 10:25:54-03:00 [COMMAND_EXIT_CODE="0"]
