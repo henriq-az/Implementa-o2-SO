@@ -172,3 +172,30 @@ Script started on 2026-08-30 17:49:12-03:00 [TERM="xterm-256color" TTY="/dev/pts
 [?2004lexit
 
 Script done on 2026-08-30 17:49:29-03:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2026-08-30 18:09:40-03:00 [TERM="xterm-256color" TTY="/dev/pts/3" COLUMNS="156" LINES="9"]
+[?2004h]0;henrique@Lenovin: ~/mandelbrot/Implementa-o2-SO[01;32mhenrique@Lenovin[00m:[01;34m~/mandelbrot/Implementa-o2-SO[00m$ make cel[K[Klean
+[?2004lrm -f mandelbrot.o mandelbrot
+[?2004h]0;henrique@Lenovin: ~/mandelbrot/Implementa-o2-SO[01;32mhenrique@Lenovin[00m:[01;34m~/mandelbrot/Implementa-o2-SO[00m$ make
+[?2004lgcc -Wall -Wextra -std=c11 -g -fopenmp -c mandelbrot.c -o mandelbrot.o
+gcc -Wall -Wextra -std=c11 -g -fopenmp -o mandelbrot mandelbrot.o -lpthread -lm
+[?2004h]0;henrique@Lenovin: ~/mandelbrot/Implementa-o2-SO[01;32mhenrique@Lenovin[00m:[01;34m~/mandelbrot/Implementa-o2-SO[00m$ [7m./mandelbrot 4 4 50 1 && cat times.txt[27m
+[7m./mandelbrot 6 6 30 3 && cat times.txt[27m
+[7m./mandelbrot 10 6 40 4 && cat times.txt[27m[A[A]0;henrique@Lenovin: ~/mandelbrot/Implementa-o2-SO[01;32mhenrique@Lenovin[00m:[01;34m~/mandelbrot/Implementa-o2-SO[00m$ ./mandelbrot 4 4 50 1 && cat times.txt
+./mandelbrot 6 6 30 3 && cat times.txt
+./mandelbrot 10 6 40 4 && cat times.txt
+[?2004lSerial: 0.000003s
+OpenMP: 0.001207s
+Pthreads1: 0.000306s
+Pthreads2: 0.000174s
+Serial: 0.000004s
+OpenMP: 0.001060s
+Pthreads1: 0.000320s
+Pthreads2: 0.000211s
+Serial: 0.000007s
+OpenMP: 0.001551s
+Pthreads1: 0.000667s
+Pthreads2: 0.000302s
+[?2004h]0;henrique@Lenovin: ~/mandelbrot/Implementa-o2-SO[01;32mhenrique@Lenovin[00m:[01;34m~/mandelbrot/Implementa-o2-SO[00m$ exit
+[?2004lexit
+
+Script done on 2026-08-30 18:09:55-03:00 [COMMAND_EXIT_CODE="0"]

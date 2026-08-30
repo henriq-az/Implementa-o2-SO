@@ -1,8 +1,16 @@
+#define _POSIX_C_SOURCE 199309L
 #include <stdio.h>
 #include "mandelbrot.h"
 #include <stdlib.h>
 #include <string.h>
 #include <pthread.h>
+#include <time.h>
+
+double agora(void) {
+    struct timespec ts;
+    clock_gettime(CLOCK_MONOTONIC, &ts);
+    return ts.tv_sec + ts.tv_nsec / 1e9;
+}
 
 typedef struct {
     int *buffer;
@@ -157,8 +165,40 @@ int main(int argc, char *argv[]) {
         return 1;
     }
 
+    FILE *tf = fopen("times.txt", "w");
+    if (tf == NULL) {
+        fprintf(stderr, "Erro ao abrir times.txt para escrita\n");
+        free(buffer);
+        return 1;
+    }
+
+    double t0, t1;
+
+    t0 = agora();
+    mandelbrot_serial(buffer, largura, altura, max_iter);
+    t1 = agora();
+    escreve_pgm("mandelbrot_hac2_serial.pgm", buffer, largura, altura, max_iter);
+    fprintf(tf, "Serial: %.6fs\n", t1 - t0);
+
+    t0 = agora();
+    mandelbrot_openmp(buffer, largura, altura, max_iter);
+    t1 = agora();
+    escreve_pgm("mandelbrot_hac2_openmp.pgm", buffer, largura, altura, max_iter);
+    fprintf(tf, "OpenMP: %.6fs\n", t1 - t0);
+
+    t0 = agora();
+    mandelbrot_pthreads1(buffer, largura, altura, max_iter, num_threads);
+    t1 = agora();
+    escreve_pgm("mandelbrot_hac2_pthreads1.pgm", buffer, largura, altura, max_iter);
+    fprintf(tf, "Pthreads1: %.6fs\n", t1 - t0);
+
+    t0 = agora();
     mandelbrot_pthreads2(buffer, largura, altura, max_iter, num_threads);
+    t1 = agora();
     escreve_pgm("mandelbrot_hac2_pthreads2.pgm", buffer, largura, altura, max_iter);
+    fprintf(tf, "Pthreads2: %.6fs\n", t1 - t0);
+
+    fclose(tf);
 
     free(buffer);
     return 0;
