@@ -10,7 +10,9 @@ typedef struct {
     int altura;
     int max_iter;
     int y_inicio;
-    int y_fim;   // exclusivo: essa thread calcula de y_inicio ate y_fim-1
+    int y_fim;
+    int thread_id;
+    int num_threads;
 } ThreadArgs;
 
 int calcula_pixel(double cx, double cy, int max_iter) {
@@ -105,6 +107,39 @@ void mandelbrot_pthreads1(int *buffer, int largura, int altura, int max_iter, in
     }
 }
 
+void *worker_pthreads2(void *arg) {
+    ThreadArgs *a = (ThreadArgs *)arg;
+
+    for (int y = a->thread_id; y < a->altura; y += a->num_threads) {
+        for (int x = 0; x < a->largura; x++) {
+            double cx = XMIN + x * (XMAX - XMIN) / a->largura;
+            double cy = YMIN + y * (YMAX - YMIN) / a->altura;
+            a->buffer[y * a->largura + x] = calcula_pixel(cx, cy, a->max_iter);
+        }
+    }
+
+    return NULL;
+}
+
+void mandelbrot_pthreads2(int *buffer, int largura, int altura, int max_iter, int num_threads) {
+    pthread_t threads[num_threads];
+    ThreadArgs args[num_threads];
+
+    for (int i = 0; i < num_threads; i++) {
+        args[i].buffer = buffer;
+        args[i].largura = largura;
+        args[i].altura = altura;
+        args[i].max_iter = max_iter;
+        args[i].thread_id = i;
+        args[i].num_threads = num_threads;
+        pthread_create(&threads[i], NULL, worker_pthreads2, &args[i]);
+    }
+
+    for (int i = 0; i < num_threads; i++) {
+        pthread_join(threads[i], NULL);
+    }
+}
+
 int main(int argc, char *argv[]) {
     if (argc != 5) {
         fprintf(stderr, "Uso: %s largura altura max_iteracoes num_threads\n", argv[0]);
@@ -122,8 +157,8 @@ int main(int argc, char *argv[]) {
         return 1;
     }
 
-    mandelbrot_pthreads1(buffer, largura, altura, max_iter, num_threads);
-    escreve_pgm("mandelbrot_hac2_pthreads1.pgm", buffer, largura, altura, max_iter);
+    mandelbrot_pthreads2(buffer, largura, altura, max_iter, num_threads);
+    escreve_pgm("mandelbrot_hac2_pthreads2.pgm", buffer, largura, altura, max_iter);
 
     free(buffer);
     return 0;
