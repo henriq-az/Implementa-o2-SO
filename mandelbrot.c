@@ -107,7 +107,10 @@ void mandelbrot_pthreads1(int *buffer, int largura, int altura, int max_iter, in
         args[i].max_iter = max_iter;
         args[i].y_inicio = i * linhas_por_thread;
         args[i].y_fim = (i == num_threads - 1) ? altura : (i + 1) * linhas_por_thread;
-        pthread_create(&threads[i], NULL, worker_pthreads1, &args[i]);
+        if (pthread_create(&threads[i], NULL, worker_pthreads1, &args[i]) != 0) {
+            fprintf(stderr, "Erro ao criar thread %d\n", i);
+            exit(1);
+        }
     }
 
     for (int i = 0; i < num_threads; i++) {
@@ -140,7 +143,10 @@ void mandelbrot_pthreads2(int *buffer, int largura, int altura, int max_iter, in
         args[i].max_iter = max_iter;
         args[i].thread_id = i;
         args[i].num_threads = num_threads;
-        pthread_create(&threads[i], NULL, worker_pthreads2, &args[i]);
+        if (pthread_create(&threads[i], NULL, worker_pthreads2, &args[i]) != 0) {
+            fprintf(stderr, "Erro ao criar thread %d\n", i);
+            exit(1);
+        }
     }
 
     for (int i = 0; i < num_threads; i++) {
@@ -158,6 +164,11 @@ int main(int argc, char *argv[]) {
     int altura = atoi(argv[2]);
     int max_iter = atoi(argv[3]);
     int num_threads = atoi(argv[4]);
+
+    if (largura <= 0 || altura <= 0 || max_iter <= 0 || num_threads <= 0) {
+        fprintf(stderr, "Erro: largura, altura, max_iteracoes e num_threads devem ser inteiros positivos\n");
+        return 1;
+    }
 
     int *buffer = malloc(largura * altura * sizeof(int));
     if (buffer == NULL) {
