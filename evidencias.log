@@ -241,3 +241,49 @@ gcc -Wall -Wextra -std=c11 -g -fopenmp -o mandelbrot mandelbrot.o -lpthread -lm
 [?2004lexit
 
 Script done on 2026-09-01 09:34:51-03:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2026-09-02 07:45:24-03:00 [TERM="xterm-256color" TTY="/dev/pts/5" COLUMNS="161" LINES="9"]
+[?2004h]0;henrique@Lenovin: ~/mandelbrot/Implementa-o2-SO[01;32mhenrique@Lenovin[00m:[01;34m~/mandelbrot/Implementa-o2-SO[00m$ make clean
+[?2004lrm -f mandelbrot.o mandelbrot
+[?2004h]0;henrique@Lenovin: ~/mandelbrot/Implementa-o2-SO[01;32mhenrique@Lenovin[00m:[01;34m~/mandelbrot/Implementa-o2-SO[00m$ make
+[?2004lgcc -Wall -Wextra -std=c11 -g -fopenmp -c mandelbrot.c -o mandelbrot.o
+gcc -Wall -Wextra -std=c11 -g -fopenmp -o mandelbrot mandelbrot.o -lpthread -lm
+[?2004h]0;henrique@Lenovin: ~/mandelbrot/Implementa-o2-SO[01;32mhenrique@Lenovin[00m:[01;34m~/mandelbrot/Implementa-o2-SO[00m$ [7m./mandelbrot 4 4 50 1[27m./mandelbrot 4 4 50 1
+[?2004l[?2004h]0;henrique@Lenovin: ~/mandelbrot/Implementa-o2-SO[01;32mhenrique@Lenovin[00m:[01;34m~/mandelbrot/Implementa-o2-SO[00m$ [7mdiff mandelbrot_hac2_serial.pgm esperado.txt[27m
+[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdiff mandelbrot_hac2_serial.pgm esperado.txt
+[A
+[?2004l3c3
+< 0 0 0 0
+---
+> 255 255 255 255
+[?2004h]0;henrique@Lenovin: ~/mandelbrot/Implementa-o2-SO[01;32mhenrique@Lenovin[00m:[01;34m~/mandelbrot/Implementa-o2-SO[00m$ [7mecho "resultado: $?"[27mecho "resultado: $?"
+[?2004lresultado: 1
+[?2004h]0;henrique@Lenovin: ~/mandelbrot/Implementa-o2-SO[01;32mhenrique@Lenovin[00m:[01;34m~/mandelbrot/Implementa-o2-SO[00m$ [K]0;henrique@Lenovin: ~/mandelbrot/Implementa-o2-SO[01;32mhenrique@Lenovin[00m:[01;34m~/mandelbrot/Implementa-o2-SO[00m$ [K]0;henrique@Lenovin: ~/mandelbrot/Implementa-o2-SO[01;32mhenrique@Lenovin[00m:[01;34m~/mandelbrot/Implementa-o2-SO[00m$ [K]0;henrique@Lenovin: ~/mandelbrot/Implementa-o2-SO[01;32mhenrique@Lenovin[00m:[01;34m~/mandelbrot/Implementa-o2-SO[00m$ [K]0;henrique@Lenovin: ~/mandelbrot/Implementa-o2-SO[01;32mhenrique@Lenovin[00m:[01;34m~/mandelbrot/Implementa-o2-SO[00m$ [K]0;henrique@Lenovin: ~/mandelbrot/Implementa-o2-SO[01;32mhenrique@Lenovin[00m:[01;34m~/mandelbrot/Implementa-o2-SO[00m$ [K]0;henrique@Lenovin: ~/mandelbrot/Implementa-o2-SO[01;32mhenrique@Lenovin[00m:[01;34m~/mandelbrot/Implementa-o2-SO[00m$ [K]0;henrique@Lenovin: ~/mandelbrot/Implementa-o2-SO[01;32mhenrique@Lenovin[00m:[01;34m~/mandelbrot/Implementa-o2-SO[00m$ [K]0;henrique@Lenovin: ~/mandelbrot/Implementa-o2-SO[01;32mhenrique@Lenovin[00m:[01;34m~/mandelbrot/Implementa-o2-SO[00m$ [K]0;henrique@Lenovin: ~/mandelbrot/Implementa-o2-SO[01;32mhenrique@Lenovin[00m:[01;34m~/mandelbrot/Implementa-o2-SO[00m$ [K]0;henrique@Lenovin: ~/mandelbrot/Implementa-o2-SO[01;32mhenrique@Lenovin[00m:[01;34m~/mandelbrot/Implementa-o2-SO[00m$ [K]0;henrique@Lenovin: ~/mandelbrot/Implementa-o2-SO[01;32mhenrique@Lenovin[00m:[01;34m~/mandelbrot/Implementa-o2-SO[00m$ [K]0;henrique@Lenovin: ~/mandelbrot/Implementa-o2-SO[01;32mhenrique@Lenovin[00m:[01;34m~/mandelbrot/Implementa-o2-SO[00m$ [K]0;henrique@Lenovin: ~/mandelbrot/Implementa-o2-SO[01;32mhenrique@Lenovin[00m:[01;34m~/mandelbrot/Implementa-o2-SO[00m$ [K]0;henrique@Lenovin: ~/mandelbrot/Implementa-o2-SO[01;32mhenrique@Lenovin[00m:[01;34m~/mandelbrot/Implementa-o2-SO[00m$ [K]0;henrique@Lenovin: ~/mandelbrot/Implementa-o2-SO[01;32mhenrique@Lenovin[00m:[01;34m~/mandelbrot/Implementa-o2-SO[00m$ exit
+[?2004lexit
+
+Script done on 2026-09-02 07:46:10-03:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2026-09-02 07:47:36-03:00 [TERM="xterm-256color" TTY="/dev/pts/5" COLUMNS="161" LINES="32"]
+[?2004h]0;henrique@Lenovin: ~/mandelbrot/Implementa-o2-SO[01;32mhenrique@Lenovin[00m:[01;34m~/mandelbrot/Implementa-o2-SO[00m$ make clean
+[?2004lrm -f mandelbrot.o mandelbrot
+[?2004h]0;henrique@Lenovin: ~/mandelbrot/Implementa-o2-SO[01;32mhenrique@Lenovin[00m:[01;34m~/mandelbrot/Implementa-o2-SO[00m$ make
+[?2004lgcc -Wall -Wextra -std=c11 -g -fopenmp -c mandelbrot.c -o mandelbrot.o
+gcc -Wall -Wextra -std=c11 -g -fopenmp -o mandelbrot mandelbrot.o -lpthread -lm
+[?2004h]0;henrique@Lenovin: ~/mandelbrot/Implementa-o2-SO[01;32mhenrique@Lenovin[00m:[01;34m~/mandelbrot/Implementa-o2-SO[00m$ [7m./mandelbrot 4 4 50 1[27m
+[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C./mandelbrot 4 4 50 1
+[A
+[?2004l[?2004h]0;henrique@Lenovin: ~/mandelbrot/Implementa-o2-SO[01;32mhenrique@Lenovin[00m:[01;34m~/mandelbrot/Implementa-o2-SO[00m$ [7mdiff mandelbrot_hac2_serial.pgm esperado.txt[27m
+[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdiff mandelbrot_hac2_serial.pgm esperado.txt
+[A
+[?2004l[?2004h]0;henrique@Lenovin: ~/mandelbrot/Implementa-o2-SO[01;32mhenrique@Lenovin[00m:[01;34m~/mandelbrot/Implementa-o2-SO[00m$ [7mecho "resultado: $?"[27mecho "resultado: $?"
+[?2004lresultado: 0
+[?2004h]0;henrique@Lenovin: ~/mandelbrot/Implementa-o2-SO[01;32mhenrique@Lenovin[00m:[01;34m~/mandelbrot/Implementa-o2-SO[00m$ [7m./mandelbrot 10 6 40 4[27m
+[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C./mandelbrot 10 6 40 4
+[A
+[?2004l[?2004h]0;henrique@Lenovin: ~/mandelbrot/Implementa-o2-SO[01;32mhenrique@Lenovin[00m:[01;34m~/mandelbrot/Implementa-o2-SO[00m$ [7mmd5sum mandelbrot_hac2_*.pgm[27mmd5sum mandelbrot_hac2_*.pgm
+[?2004l0c2f8c177d9c6501fe3688783b7fc20c  mandelbrot_hac2_openmp.pgm
+0c2f8c177d9c6501fe3688783b7fc20c  mandelbrot_hac2_pthreads1.pgm
+0c2f8c177d9c6501fe3688783b7fc20c  mandelbrot_hac2_pthreads2.pgm
+0c2f8c177d9c6501fe3688783b7fc20c  mandelbrot_hac2_serial.pgm
+[?2004h]0;henrique@Lenovin: ~/mandelbrot/Implementa-o2-SO[01;32mhenrique@Lenovin[00m:[01;34m~/mandelbrot/Implementa-o2-SO[00m$ exit
+[?2004lexit
+
+Script done on 2026-09-02 07:48:27-03:00 [COMMAND_EXIT_CODE="0"]
